@@ -1,18 +1,11 @@
-interface ICoin {
-  fun getValueInCents(): Int
-}
+//You can give an enum a value, so you don't need an interface. :)
+enum class Coin(val cents: Int) {
+  PENNY(1),
+  NICKLE(5),
+  DIME(10),
+  QUARTER(25);
 
-enum class Coin : ICoin {
-  PENNY {
-    override fun getValueInCents() = 1
-  },
-  NICKLE {
-    override fun getValueInCents() = 5
-  },
-  DIME {
-    override fun getValueInCents() = 10
-  },
-  QUARTER {
-    override fun getValueInCents() = 25
+  fun isValid(): Boolean {
+    return this != PENNY
   }
 }
