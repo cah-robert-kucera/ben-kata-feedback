@@ -6,5 +6,7 @@ enum class Product(val cents: Int){
 
     fun canBePurchased(balance: Int) = balance >= cents
 
+    fun canBePurchased2(balance: Int): Boolean { return balance >= cents}
+
  }
 

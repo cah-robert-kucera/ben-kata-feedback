@@ -1,7 +1,6 @@
 class VendingMachine {
-    private var coins: ArrayList<Coin> = arrayListOf()
-    private val inventory: Map<Product, Int> =
-        mapOf(Pair(Product.COLA, 1), Pair(Product.CHIPS, 1), Pair(Product.CANDY, 1))
+    private var coins = arrayListOf<Coin>()
+    private val inventory = mapOf(Pair(Product.COLA, 1), Pair(Product.CHIPS, 1), Pair(Product.CANDY, 1))
     private var justVended = false
 
     //fancy use of the getter as well as using the sumof function
@@ -27,7 +26,7 @@ class VendingMachine {
         return if (product.canBePurchased(balance)) vend(product) else null
 
         //if vend were a pure function, you could do something like this, but as is it would call the side effects, which you don't want
-        //vend(product).takeIf { canAffordProduct(product) }
+//        vend(product).takeIf { canAffordProduct(product) }
     }
 
     fun returnCoins() {

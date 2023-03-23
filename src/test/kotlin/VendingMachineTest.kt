@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test
 internal class VendingMachineTest {
 //A shared object means you could easily have state shared between tests, and that tests would not pass if run out of order.
 
+
   @Test
   fun `coin value does not increases when penny is inserted`() {
 
